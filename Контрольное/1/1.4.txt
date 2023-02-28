@@ -1,0 +1,17 @@
+let str = "Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
+let words = str.split([" "]);
+
+let wordsCount = words.reduce(function (acc, word) {
+  if (acc[word]) {
+    acc[word] += 1
+  } 
+  else {
+    acc[word] = 1;
+  }
+ 
+  return acc;
+}, []);
+ 
+for (let word in wordsCount) {
+console.log("Слово " + word, wordsCount[word] + " раз")};

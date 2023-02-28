@@ -1,0 +1,14 @@
+function correctSpaces(str) {
+  str = str.split('       ').join(' '); // и т.д.
+  str = str.split('      ').join(' ');
+  str = str.split('     ').join(' ');
+  str = str.split('    ').join(' ');
+  str = str.split('   ').join(' ');
+  str = str.split('  ').join(' ');
+  str = str.split('  ,').join(',');
+  str = str.split(' ,').join(',');
+  str = str.split('  .').join('.');
+  str = str.split(' .').join('.');
+  return str;
+}
+console.log(correctSpaces('sd , dsa  ,    fdf  f     fd'));

@@ -1,0 +1,31 @@
+class Product {
+    constructor(name, price, quantity, description) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+    }
+}
+
+const myArray = [new Product('fsdfgdfd', 2, 8, 'abc'), new Product('fjghj', 6, 6, 'abc'), 
+new Product('fdjghj', 6, 5, 'adfssdfbc'), new Product('fsjfdghj', 2, 6, 'adfssdfabc')];
+
+//const str = 'name-contains-fd&price-=2-&quantity->5&description-ends-abc';
+
+let result = myArray.filter((x) => { 
+  return (x.name.includes('fd') && 
+  x.price == 2 && 
+  x.quantity > 5 && 
+  x.description.endsWith('abc'));
+}, [])
+
+console.log(result); 
+
+//const str = 'name-starts-fd&quantity=5';
+
+result = myArray.filter((x) => { 
+  return (x.name.startsWith('fd') && 
+  x.quantity == 5);
+}, [])
+
+console.log(result); 

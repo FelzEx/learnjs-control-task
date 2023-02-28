@@ -1,0 +1,19 @@
+function WordsCheck(str) {
+  str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,'');
+  let words = str.split(" ");
+  
+  let wordsCount = words.reduce(function (acc, word) {
+    if (acc[word]) {
+      acc[word] += 1
+    } 
+    else {
+      acc[word] = 1;
+    }
+    return acc;
+  }, []);
+  return Object.keys(wordsCount).map(k => {
+    return `Слово: ${k}: ${wordsCount[k]}`;
+  }, [])   
+}
+
+console.log(WordsCheck('Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry.'));

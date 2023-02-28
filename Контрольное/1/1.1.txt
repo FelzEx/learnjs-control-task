@@ -1,0 +1,6 @@
+function lowRegistr(str) {
+  str = str.toLowerCase();
+  return (str.at(0).toUpperCase() + str.slice(1));
+}
+
+console.log(lowRegistr("teSt реГистРА"));

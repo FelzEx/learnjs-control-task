@@ -1,0 +1,6 @@
+function WordCount(str) { 
+  str = str.replace(/\s+/g, ' ');
+  return str.split(" ").length;
+}
+
+console.log(WordCount("hello world    gfdg fgd fgdfgdf"));

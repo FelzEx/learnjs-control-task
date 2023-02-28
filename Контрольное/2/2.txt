@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let numFirst = String(prompt('Введите первое число', ''));
+let numSecond = String(prompt('Введите второе число', ''));
+let operator = prompt('Введите знак операции', '');
+
+function calcResult(numFirst, numSecond, operator) {
+  switch (operator) {
+    case '+':
+      return BigInt(numFirst + numSecond);
+    case '-':
+      return BigInt(numFirst - numSecond);
+    case '*':
+      return BigInt(numFirst * numSecond);
+    case '/':
+      return BigInt(numFirst / numSecond);
+    default:
+      return ('Ошибка');
+  }
+}
+
+alert(String(calcResult(numFirst, numSecond, operator)));
+</script>
